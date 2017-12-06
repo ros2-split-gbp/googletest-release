@@ -1,1 +1,1 @@
-{"parent": "debian/ardent/gtest_vendor", "trim": "", "base": "5fb3d1e", "trimbase": "", "previous": "7b36014"}
+{"base": "97faf97", "previous": "9ab0c00", "trimbase": "", "trim": "", "parent": "debian/ardent/gtest_vendor"}
