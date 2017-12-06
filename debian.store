@@ -1,1 +1,1 @@
-{"parent": "debian/ardent/gmock_vendor", "trim": "", "base": "dbe7263", "trimbase": "", "previous": "7b9a57b"}
+{"base": "826f7d1", "previous": "b26fd67", "trimbase": "", "trim": "", "parent": "debian/ardent/gmock_vendor"}
