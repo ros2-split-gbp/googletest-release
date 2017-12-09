@@ -18,7 +18,7 @@ tracks:
     patches: null
     release_inc: '3'
     release_repo_url: null
-    release_tag: ros2
+    release_tag: eb77b54187d95024d37dce7201731637e5e42fb8
     ros_distro: ardent
     vcs_type: git
     vcs_uri: https://github.com/ament/googletest.git
