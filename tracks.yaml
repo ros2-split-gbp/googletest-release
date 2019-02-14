@@ -61,7 +61,7 @@ tracks:
       -i :{release_inc} --os-name debian --os-not-required
     - git-bloom-generate -y rosrpm --prefix release/:{ros_distro} :{ros_distro} -i
       :{release_inc}
-    devel_branch: ros2
+    devel_branch: crystal
     last_release: c8b6f2be853002b9a0abfb30ea537402383bf1f4
     last_version: 1.8.0
     name: upstream
