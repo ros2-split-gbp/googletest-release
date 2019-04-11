@@ -1,5 +1,5 @@
 # Build matrix / environment variable are explained on:
-# http://about.travis-ci.org/docs/user/build-configuration/
+# https://docs.travis-ci.com/user/customizing-the-build/
 # This file can be validated on:
 # http://lint.travis-ci.org/
 
@@ -25,6 +25,7 @@ matrix:
       compiler: gcc
       install: ./ci/install-linux.sh && ./ci/log-config.sh
       script: ./ci/build-linux-autotools.sh
+      env: VERBOSE=1 CXXFLAGS=-std=c++11
     - os: linux
       group: deprecated-2017Q4
       compiler: gcc
@@ -32,27 +33,28 @@ matrix:
     - os: linux
       group: deprecated-2017Q4
       compiler: clang
-      env: BUILD_TYPE=Debug VERBOSE=1
+      env: BUILD_TYPE=Release VERBOSE=1 CXX_FLAGS=-std=c++11
     - os: linux
-      group: deprecated-2017Q4
       compiler: clang
-      env: BUILD_TYPE=Release VERBOSE=1 CXX_FLAGS=-std=c++11
-    - os: osx
-      compiler: gcc
-      env: BUILD_TYPE=Debug VERBOSE=1
-      if: type != pull_request
+      env: BUILD_TYPE=Release VERBOSE=1 CXX_FLAGS=-std=c++11 NO_EXCEPTION=ON NO_RTTI=ON COMPILER_IS_GNUCXX=ON
     - os: osx
       compiler: gcc
       env: BUILD_TYPE=Release VERBOSE=1 CXX_FLAGS=-std=c++11
-      if: type != pull_request
     - os: osx
-      compiler: clang
-      env: BUILD_TYPE=Debug VERBOSE=1
-      if: type != pull_request
-    - os: osx
-      compiler: clang
       env: BUILD_TYPE=Release VERBOSE=1 CXX_FLAGS=-std=c++11
       if: type != pull_request
+
+before_install:
+  - |
+    if [ "$TRAVIS_OS_NAME" != "osx" ] && [ ! -f ${TRAVIS_BUILD_DIR}/apt-cache/pkgcache.bin ]; then
+       mkdir -p ${TRAVIS_BUILD_DIR}/apt-cache/archives/partial
+       mkdir -p ${TRAVIS_BUILD_DIR}/apt-cache/partial
+       mkdir -p ${TRAVIS_BUILD_DIR}/apt-cache/lists
+       sudo apt-get -y -o Dir::cache=${TRAVIS_BUILD_DIR}/apt-cache -o Dir::State::Lists=${TRAVIS_BUILD_DIR}/apt-cache/lists update
+       sudo apt-get install --download-only -o Dir::cache=${TRAVIS_BUILD_DIR}/apt-cache -o Dir::State::Lists=${TRAVIS_BUILD_DIR}/apt-cache/lists g++-4.9 clang-3.9
+    fi
+  - if [ "$TRAVIS_OS_NAME" != "osx" ]; then sudo apt-get install --no-download -o Dir::cache=${TRAVIS_BUILD_DIR}/apt-cache -o Dir::State::Lists=${TRAVIS_BUILD_DIR}/apt-cache/lists g++-4.9 clang-3.9; fi
+  - if [ "$TRAVIS_OS_NAME" != "osx" ]; then sudo chown -R $USER ${TRAVIS_BUILD_DIR}/apt-cache; fi
 
 # These are the install and build (script) phases for the most common entries in the matrix.  They could be included
 # in each entry in the matrix, but that is just repetitive.
@@ -72,10 +74,11 @@ addons:
     #   https://github.com/travis-ci/apt-source-whitelist/blob/master/ubuntu.json
     sources:
     - ubuntu-toolchain-r-test
-    - llvm-toolchain-precise-3.7
-    packages:
-    - g++-4.9
-    - clang-3.7
+    - llvm-toolchain-precise-3.9
+
+cache:
+  directories:
+    - apt-cache
 
 notifications:
   email: false
