@@ -1,3 +1,28 @@
+## googletest (eloquent) - 1.8.9000-1
+
+The packages in the `googletest` repository were released into the `eloquent` distro by running `/usr/bin/bloom-release --rosdistro eloquent --track eloquent --new-track googletest` on `Mon, 08 Jul 2019 14:46:34 -0000`
+
+These packages were released:
+- `gmock_vendor`
+- `gtest_vendor`
+
+Version of package(s) in repository `googletest`:
+
+- upstream repository: https://github.com/ament/googletest.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.8.9000-1`
+
+Versions of tools used:
+
+- bloom version: `0.8.0`
+- catkin_pkg version: `0.4.12`
+- rosdep version: `0.15.2`
+- rosdistro version: `0.7.4`
+- vcstools version: `0.1.40`
+
+
 ## googletest (dashing) - 1.8.9000-1
 
 The packages in the `googletest` repository were released into the `dashing` distro by running `/usr/local/bin/bloom-release -r dashing -t dashing googletest` on `Wed, 08 May 2019 23:30:57 -0000`
