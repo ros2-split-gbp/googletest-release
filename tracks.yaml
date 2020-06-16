@@ -195,5 +195,4 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/ament/googletest.git
-    version: 1.8.9000
-    version_saved: :{auto}
+    version: :{auto}
