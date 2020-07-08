@@ -86,7 +86,7 @@ tracks:
       -i :{release_inc} --os-name debian --os-not-required
     - git-bloom-generate -y rosrpm --prefix release/:{ros_distro} :{ros_distro} -i
       :{release_inc}
-    devel_branch: ros2
+    devel_branch: dashing
     last_release: 51a1a80a481f1d5eb0ab524ec4a673b7aa05b6ee
     last_version: 1.8.9000
     name: googletest
