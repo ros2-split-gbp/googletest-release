@@ -186,10 +186,10 @@ tracks:
       :{release_inc}
     devel_branch: ros2
     last_release: ros2
-    last_version: 1.8.9000
+    last_version: 1.10.9000
     name: googletest
     patches: null
-    release_inc: '2'
+    release_inc: '1'
     release_repo_url: null
     release_tag: ros2
     ros_distro: rolling
