@@ -1,3 +1,28 @@
+## googletest (rolling) - 1.10.9001-1
+
+The packages in the `googletest` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --track rolling --rosdistro rolling googletest` on `Mon, 25 Jan 2021 14:57:58 -0000`
+
+These packages were released:
+- `gmock_vendor`
+- `gtest_vendor`
+
+Version of package(s) in repository `googletest`:
+
+- upstream repository: https://github.com/ament/googletest.git
+- release repository: https://github.com/ros2-gbp/googletest-release.git
+- rosdistro version: `1.10.9000-1`
+- old version: `1.10.9000-1`
+- new version: `1.10.9001-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.0`
+- catkin_pkg version: `0.4.23`
+- rosdep version: `0.20.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## googletest (rolling) - 1.10.9000-1
 
 The packages in the `googletest` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling --track rolling googletest` on `Tue, 20 Oct 2020 20:06:16 -0000`
