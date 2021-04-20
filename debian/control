@@ -1,0 +1,12 @@
+Source: ros-galactic-gmock-vendor
+Section: misc
+Priority: optional
+Maintainer: Michel Hidalgo <michel@ekumenlabs.com>
+Build-Depends: debhelper (>= 9.0.0), cmake, ros-galactic-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-galactic-gmock-vendor
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-galactic-gtest-vendor, ros-galactic-ros-workspace
+Description: The package provides GoogleMock.
