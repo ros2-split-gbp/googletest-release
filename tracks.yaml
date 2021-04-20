@@ -173,8 +173,7 @@ tracks:
     ros_distro: galactic
     vcs_type: git
     vcs_uri: https://github.com/ament/googletest.git
-    version: 1.10.9003
-    version_saved: :{auto}
+    version: :{auto}
   r2b3:
     actions:
     - bloom-export-upstream :{vcs_local_uri} :{vcs_type} --tag :{release_tag} --display-uri
