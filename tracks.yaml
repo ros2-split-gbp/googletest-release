@@ -171,7 +171,7 @@ tracks:
     patches: null
     release_inc: '2'
     release_repo_url: null
-    release_tag: ros2
+    release_tag: :{version}
     ros_distro: galactic
     vcs_type: git
     vcs_uri: https://github.com/ament/googletest.git
@@ -222,7 +222,7 @@ tracks:
     patches: null
     release_inc: '1'
     release_repo_url: null
-    release_tag: ros2
+    release_tag: :{version}
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/ament/googletest.git
