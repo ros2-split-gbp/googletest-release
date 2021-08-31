@@ -139,7 +139,7 @@ tracks:
       :{release_inc} --os-name rhel
     devel_branch: foxy
     last_release: ros2
-    last_version: 1.8.9000
+    last_version: 1.8.9001
     name: googletest
     patches: null
     release_inc: '1'
