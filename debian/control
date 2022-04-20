@@ -1,0 +1,12 @@
+Source: ros-humble-gmock-vendor
+Section: misc
+Priority: optional
+Maintainer: Audrow Nash <audrow@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), cmake, ros-humble-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-humble-gmock-vendor
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-gtest-vendor, ros-humble-ros-workspace
+Description: The package provides GoogleMock.
